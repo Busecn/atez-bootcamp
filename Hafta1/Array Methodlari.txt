@@ -1,34 +1,118 @@
 1. forEach()
 Bu method dizi içerisindeki her eleman için fonksiyonu çalıştırır.
 
+	var array = ['a', 'b', 'c'];
+
+	array.forEach(function(element) {
+  	console.log(element);
+	});
+
+	// ekran çıktısı: "a"
+	// ekran çıktısı: "b"
+	// ekran çıktısı: "c"
+
 2. includes()
 Bu method bir dizinin belirli bir elemanı içerip içermediğini belirler, içeriyorsa true içermiyorsa false değeri döndürür.
 
+	var pets = ['cat', 'dog', 'bat'];
+
+	console.log(pets.includes('cat'));
+	// ekran çıktısı: true
+
+	console.log(pets.includes('at'));
+	// ekran çıktısı: false
+
 3. filter()
 Bu method belirlediğimiz bir kurala göre tüm dizi elemanlarını kontrol eder ve kuralı geçen dizi elemanlarıyla yeni bir dizi oluşturur.
+
+	const array = [1, 2, 3, 4, 5, 6];
+
+	// array dizisinde bulunan 3'ten büyük sayılar
+	const filtered = array.filter(num => num > 3);
+
+	console.log(filtered); // ekran çıktısı: [4, 5, 6]
+
+	console.log(arr); // ekran çıktısı: [1, 2, 3, 4, 5, 6]
 
 4. map()
 Bu method bir dizide değişiklik yaparak yeni bir dizi oluşturmaya yardımcı olur.Bu metod iki parametre alır; 
 birinci parametre işlem gerçekleştirecek olan methodumuz ikincisi ise ilk değerimizdir. Eğer ilk değeri belirtmezsek 
 ilk değerimiz dizimizin ‘0’ index numaralı elemanı olur.
 
+	const numbers = [1, 2, 3, 4, 5, 6];
+
+	// her elemana bir ekliyoruz
+	const oneAdded = numbers.map(num => num + 1);
+
+	console.log(oneAdded); // ekran çıktısı: [2, 3, 4, 5, 6, 7]
+
+	console.log(numbers); // ekran çıktısı: [1, 2, 3, 4, 5, 6]
+
 5. reduce()
 Bu metod iki parametre alır; birinci parametre işlem gerçekleştirecek olan methodumuz ikincisi ise ilk değerimizdir. 
 Eğer ilk değeri belirtmezsek ilk değerimiz dizimizin ‘0’ index numaralı elemanı olur.
 
+	const array = [1, 2, 3, 4, 5];
+
+	const islemYapanMetod = (toplam, simdikiDeger) => toplam + simdikiDeger;
+	// 1 + 2 + 3 + 4 + 5
+
+	console.log(array.reduce(islemYapanMetod));
+	// ekran çıktısı: 15
+
 6. some()
 Bu method dizimizde bulunan elemanların en az biri belirlediğimiz kurala uyuyorsa true, hiçbiri uymuyorsa false değeri döner.
+
+	// Dizi elemanlarımızdan en az bir tanesi 10'dan büyük mü ?
+	function buyukMu10(element, index, array) {
+  	return element > 10;
+	}
+
+	[2, 5, 8, 1, 4].some(buyukMu10);  // false
+	[12, 5, 8, 1, 4].some(buyukMu10); // true
 
 7. every()
 Bu method dizimizde bulunan elemanların tamamı belirlediğimiz kurala uyuyorsa true, herhangi birisi uymuyorsa false değeri döner.
 
+	const arr = [1, 2, 3, 4, 5, 6];
+
+	// tüm elemanlar 4'ten büyük mü?
+	const dorttenBuyuk = arr.every(num => num > 4);
+	console.log(dorttenBuyuk); // ekran çıktısı: false
+
+	// tüm elemanlar 10'dan küçük mü?
+	const ondanKucuk = arr.every(num => num < 10);
+	console.log(ondanKucuk); // ekran çıktısı: true
+
 8. sort()
 Bu method, dizinin elemanlarını artan veya azalan düzende düzenlemek / sıralamak için kullanılır.
 
+	var months = ['March', 'Jan', 'Feb', 'Dec'];
+
+	months.sort();
+	console.log(months);
+	// ekran çıktısı: Array ["Dec", "Feb", "Jan", "March"]
+
+	var array1 = [1, 30, 4, 21];
+
+	array1.sort();
+	console.log(array1);
+	// ekran çıktısı: Array [1, 21, 30, 4]
+
 9. Array.from()
 Bu method dizi oluşturmamıza yardımcı olur özellikle DOM üzerinde çalışıyorken oldukça işimize yarayabilir.
+
+	let text = "birşey"
+
+	console.log(text); // ekran çıktısı: birşey
+	console.log(Array.from(text)); // ekran çıktısı:   ["b", "i", "r", "ş", "e", "y"]
 
 10. Array.of()
 Bu method ile yeni bir dizi oluşturabilirsiniz. Eğer Array() methoduyla ne farkı olduğunu düşünüyorsanız farkı şudur; 
 Array() methoduna tek bir parametre gönderirseniz ve bu bir sayı ise dizi oluşturulmaz gönderdiğiniz sayı boyutunda elemanları 
 boş bir dizi oluşturulur ancak Array.of() methoduna tek bir parametre ve sayı bile gönderseniz, o elemanın bulunduğu bir dizi oluşturur. 
+
+	console.log(Array.of(1, 2, 3)); // [1, 2, 3]        
+	console.log(Array(1, 2, 3));    // [1, 2, 3]
+	console.log(Array.of(5)); // [5] 
+	console.log(Array(5)); // [ , , , , ]
