@@ -1,0 +1,29 @@
+1. forEach()
+Bu method dizi içerisindeki her eleman için fonksiyonu çalıştırır.
+
+2. includes()
+Bu method bir dizinin belirli bir elemanı içerip içermediğini belirler, içeriyorsa true içermiyorsa false değeri döndürür.
+
+3. filter()
+Bu method belirlediğimiz bir kurala göre tüm dizi elemanlarını kontrol eder ve kuralı geçen dizi elemanlarıyla yeni bir dizi oluşturur.
+
+4. map()
+Bu method bir dizide değişiklik yaparak yeni bir dizi oluşturmaya yardımcı olur.Bu metod iki parametre alır; birinci parametre işlem gerçekleştirecek olan methodumuz ikincisi ise ilk değerimizdir. Eğer ilk değeri belirtmezsek ilk değerimiz dizimizin ‘0’ index numaralı elemanı olur.
+
+5. reduce()
+Bu metod iki parametre alır; birinci parametre işlem gerçekleştirecek olan methodumuz ikincisi ise ilk değerimizdir. Eğer ilk değeri belirtmezsek ilk değerimiz dizimizin ‘0’ index numaralı elemanı olur.
+
+6. some()
+Bu method dizimizde bulunan elemanların en az biri belirlediğimiz kurala uyuyorsa true, hiçbiri uymuyorsa false değeri döner.
+
+7. every()
+Bu method dizimizde bulunan elemanların tamamı belirlediğimiz kurala uyuyorsa true, herhangi birisi uymuyorsa false değeri döner.
+
+8. sort()
+Bu method, dizinin elemanlarını artan veya azalan düzende düzenlemek / sıralamak için kullanılır.
+
+9. Array.from()
+Bu method dizi oluşturmamıza yardımcı olur özellikle DOM üzerinde çalışıyorken oldukça işimize yarayabilir.
+
+10. Array.of()
+Bu method ile yeni bir dizi oluşturabilirsiniz. Eğer Array() methoduyla ne farkı olduğunu düşünüyorsanız farkı şudur; Array() methoduna tek bir parametre gönderirseniz ve bu bir sayı ise dizi oluşturulmaz gönderdiğiniz sayı boyutunda elemanları boş bir dizi oluşturulur ancak Array.of() methoduna tek bir parametre ve sayı bile gönderseniz, o elemanın bulunduğu bir dizi oluşturur. 
