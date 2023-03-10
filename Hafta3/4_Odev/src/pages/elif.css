@@ -1,0 +1,14 @@
+body {
+    background-color: lightgrey;
+    color: mediumslateblue;
+}
+
+h1 {
+    background-color: black;
+    color: hotpink;
+}
+
+div {
+    background-color: lightpink;
+    color: white;
+}
